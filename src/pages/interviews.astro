@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Exclusive Interviews";
+const pageDescription = "Dive into intimate conversations with basketball legends on Court Chronicles. Uncover personal stories, triumphs, and lessons from the heart of the game.";
+const featuredInterviews = [
+  {
+    id: 1,
+    title: "Kobe Bryant's Mamba Mentality Revisited",
+    excerpt: "A posthumous reflection with those who knew him best, exploring the relentless pursuit of excellence that defined his legacy.",
+    author: "Sarah Martinez",
+    date: "May 15, 2023"
+  },
+  {
+    id: 2,
+    title: "Magic Johnson: The Visionary Who Changed the Game",
+    excerpt: "Uncovering the mind behind the iconic plays and the leadership that redefined the Lakers' dynasty.",
+    author: "Daniel Chen",
+    date: "April 28, 2023"
+  },
+  {
+    id: 3,
+    title: "The Rise of the Modern Era: A Generational Perspective",
+    excerpt: "Insights from players who bridged the gap between classic and contemporary basketball.",
+    author: "Maria Rodriguez",
+    date: "March 12, 2023"
+  }
+];
+const interviewCategories = [
+  { name: "Legends", count: 24 },
+  { name: "Champions", count: 18 },
+  { name: "Rising Stars", count: 9 },
+  { name: "Coaches", count: 15 }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  {/* Hero Section */}
+  <div class="relative bg-gradient-to-br from-[#0c111a] to-[#1a2232] py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="grid grid-cols-12 gap-4 h-full">
+          {Array.from({ length: 144 }).map((_, i) => (
+            <div key={i} class="border border-[#5eead4] rounded-full"></div>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+          Exclusive Interviews
+        </h1>
+        <p class="text-xl text-[#5eead4] mb-10 font-light tracking-wide">
+          Unveiling the Heart of Basketball Through Timeless Stories
+        </p>
+        <div class="w-24 h-1 bg-[#5eead4] mx-auto mb-10"></div>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          Dive into intimate conversations with basketball legends on Court Chronicles. 
+          Uncover personal stories, triumphs, and lessons from the heart of the game.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Introduction Section */}
+  <section class="py-20 bg-gradient-to-b from-[#0c111a] to-[#1a2232]">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-[#5eead4] rounded-lg opacity-20 blur-lg"></div>
+            <div class="relative bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-30 rounded-xl p-8 shadow-2xl">
+              <h2 class="text-3xl font-serif font-bold text-white mb-6">Interviews: Voices from the Court</h2>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                Welcome to the <span class="text-[#5eead4] font-semibold">Interviews</span> section of <em>Court Chronicles</em>, where the echoes of hardwood floors give way to the raw, unfiltered voices of basketball's greatest minds. Our elegant storytelling brings you closer to the souls who have shaped the sport, revealing the passion, perseverance, and poetry behind every crossover and championship.
+              </p>
+              <p class="text-gray-300 leading-relaxed">
+                Through these timeless dialogues, we peel back the layers of fame to expose the human spirit that drives the game. From rookie dreams to veteran wisdom, each interview is a chapter in basketball's living history.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-30 rounded-xl p-6 shadow-xl hover:shadow-[0_0_20px_rgba(94,234,212,0.3)] transition-all duration-300">
+              <div class="text-[#5eead4] text-4xl mb-4">
+                <i class="fas fa-microphone-alt"></i>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-white mb-3">Authentic Voices</h3>
+              <p class="text-gray-300 text-sm">Direct access to the athletes' most personal reflections and moments.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-30 rounded-xl p-6 shadow-xl hover:shadow-[0_0_20px_rgba(94,234,212,0.3)] transition-all duration-300">
+              <div class="text-[#5eead4] text-4xl mb-4">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-white mb-3">Living History</h3>
+              <p class="text-gray-300 text-sm">Capture the evolving narrative of basketball's most compelling characters.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-30 rounded-xl p-6 shadow-xl hover:shadow-[0_0_20px_rgba(94,234,212,0.3)] transition-all duration-300">
+              <div class="text-[#5eead4] text-4xl mb-4">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-white mb-3">Human Stories</h3>
+              <p class="text-gray-300 text-sm">Beyond statistics, explore the heart and soul of basketball.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-30 rounded-xl p-6 shadow-xl hover:shadow-[0_0_20px_rgba(94,234,212,0.3)] transition-all duration-300">
+              <div class="text-[#5eead4] text-4xl mb-4">
+                <i class="fas fa-history"></i>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-white mb-3">Timeless Wisdom</h3>
+              <p class="text-gray-300 text-sm">Legacy insights that transcend generations of fans and players.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Featured Interviews */}
+  <section class="py-20 bg-[#0c111a]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-serif font-bold text-white mb-4">Featured Interviews</h2>
+        <div class="w-24 h-1 bg-[#5eead4] mx-auto"></div>
+        <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+          Dive deep into the stories that shaped basketball legend
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredInterviews.map((interview) => (
+          <div 
+            key={interview.id} 
+            class="group bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-20 rounded-xl overflow-hidden shadow-xl hover:shadow-[0_0_30px_rgba(94,234,212,0.2)] transition-all duration-500 transform hover:-translate-y-2"
+          >
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <span class="text-xs font-semibold px-3 py-1 bg-[#5eead4] bg-opacity-20 text-[#5eead4] rounded-full">
+                  Featured
+                </span>
+                <span class="text-xs text-gray-500">{interview.date}</span>
+              </div>
+              
+              <h3 class="text-xl font-serif font-bold text-white mb-4 group-hover:text-[#5eead4] transition-colors duration-300">
+                {interview.title}
+              </h3>
+              
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                {interview.excerpt}
+              </p>
+              
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#5eead4] to-[#0c111a] border border-[#5eead4] flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-sm">{interview.author.charAt(0)}</span>
+                  </div>
+                  <span class="text-gray-400 text-sm">{interview.author}</span>
+                </div>
+                
+                <button class="text-[#5eead4] hover:text-white transition-colors duration-300 flex items-center group">
+                  <span class="mr-1">Read Full Interview</span>
+                  <i class="fas fa-arrow-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Categories Section */}
+  <section class="py-20 bg-gradient-to-b from-[#1a2232] to-[#0c111a]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-serif font-bold text-white mb-4">Interview Categories</h2>
+        <div class="w-24 h-1 bg-[#5eead4] mx-auto"></div>
+        <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+          Explore conversations by basketball era and influence
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {interviewCategories.map((category, index) => (
+          <div 
+            key={index} 
+            class="bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-20 rounded-xl p-8 text-center shadow-xl hover:shadow-[0_0_25px_rgba(94,234,212,0.15)] transition-all duration-300 hover:border-[#5eead4] hover:border-opacity-50"
+          >
+            <div class="text-4xl text-[#5eead4] mb-4">
+              <i class="fas fa-basketball-ball"></i>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white mb-2">{category.name}</h3>
+            <p class="text-gray-400 text-sm">{category.count} Interviews</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA Section */}
+  <section class="py-20 bg-gradient-to-r from-[#0c111a] to-[#1a2232]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold text-white mb-6">Ready for More Stories?</h2>
+        <p class="text-gray-300 mb-10 text-lg max-w-2xl mx-auto">
+          Subscribe to our newsletter and never miss an exclusive interview from Court Chronicles
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Your email address" 
+            class="px-6 py-4 bg-gradient-to-br from-[#1b263b] to-[#0c111a] border border-[#5eead4] border-opacity-30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#5eead4] focus:border-transparent w-full"
+          />
+          <button class="px-8 py-4 bg-[#5eead4] text-[#0c111a] font-bold rounded-xl hover:bg-[#4bc8b6] transition-colors duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(94,234,212,0.4)]">
+            Subscribe
+          </button>
+        </div>
+        <p class="text-gray-500 mt-6 text-sm">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .font-serif {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  
+  .transition-transform {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover\:shadow-[0_0_20px_rgba(94,234,212,0.3)] {
+    box-shadow: 0 0 20px rgba(94, 234, 212, 0.3);
+  }
+  
+  .hover\:shadow-[0_0_25px_rgba(94,234,212,0.15)] {
+    box-shadow: 0 0 25px rgba(94, 234, 212, 0.15);
+  }
+  
+  .hover\:shadow-[0_0_30px_rgba(94,234,212,0.2)] {
+    box-shadow: 0 0 30px rgba(94, 234, 212, 0.2);
+  }
+  
+  .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  }
+  
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  
+  .bg-gradient-to-b {
+    background: linear-gradient(to bottom, var(--tw-gradient-stops));
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #5eead4, #0c111a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Features of Court Chronicles";
+const pageDescription = "Discover the standout features of Court Chronicles, where elegant storytelling meets modern basketball insights, offering timeless stories, immersive experiences, and community engagement for true fans.";
+
+const features = [
+  {
+    title: "Timeless Stories Archive",
+    description: "Dive into an extensive collection of basketball lore with iconic legends, forgotten tales, and seasonal spotlights.",
+    icon: "fa-book-open"
+  },
+  {
+    title: "Immersive Modern Experiences",
+    description: "Experience basketball through interactive storytelling, multimedia presentations, and virtual court tours.",
+    icon: "fa-vr-cardboard"
+  },
+  {
+    title: "Community Engagement Hub",
+    description: "Connect with fellow basketball enthusiasts through discussions, fan polls, and shared memories.",
+    icon: "fa-users"
+  },
+  {
+    title: "Expert Insights & Analysis",
+    description: "Gain deeper understanding with expert commentary on gameplay, strategy, and cultural impact.",
+    icon: "fa-chart-line"
+  }
+];
+
+const storyCategories = [
+  {
+    title: "Iconic Legends",
+    description: "Profiles of NBA greats like Michael Jordan and Kobe Bryant, with untold anecdotes and pivotal moments."
+  },
+  {
+    title: "Forgotten Tales",
+    description: "Unearth hidden gems from college courts to streetball legends, preserving the game's diverse roots."
+  },
+  {
+    title: "Seasonal Spotlights",
+    description: "Curated stories from pivotal eras, like the Magic vs. Bird rivalry or the rise of international stars."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="min-h-screen bg-gradient-to-b from-primary to-accent/10">
+    {/* Hero Section */}
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent/20 z-0"></div>
+      <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+            Features of Court Chronicles
+          </h1>
+          <p class="text-xl md:text-2xl text-accent/90 font-light mb-8 max-w-2xl">
+            Unveiling the Heart of Basketball Through Timeless Stories
+          </p>
+          <p class="text-gray-300 text-lg max-w-3xl">
+            Discover the standout features of Court Chronicles, where elegant storytelling meets modern basketball insights, offering timeless stories, immersive experiences, and community engagement for true fans.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Features Grid */}
+    <section class="py-20 bg-primary">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Our Core Features</h2>
+          <div class="w-24 h-1 bg-accent mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 group"
+            >
+              <div class="text-accent text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <i class={`fas ${feature.icon}`}></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p class="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Story Archive Section */}
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Timeless Stories Archive</h2>
+          <p class="text-accent max-w-2xl mx-auto">Dive into an extensive collection of basketball lore that spans decades and cultures</p>
+          <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {storyCategories.map((category, index) => (
+            <div 
+              key={index}
+              class="bg-gradient-to-br from-primary/70 to-accent/20 rounded-xl p-8 border border-white/10 hover:border-accent/50 transition-all duration-300 group"
+            >
+              <div class="mb-6">
+                <div class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
+                  <i class="fas fa-book text-accent text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">{category.title}</h3>
+              </div>
+              <p class="text-gray-300 leading-relaxed">{category.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Immersive Experience Section */}
+    <section class="py-20 bg-gradient-to-r from-primary to-accent/10">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="relative">
+              <div class="bg-gradient-to-br from-accent/20 to-primary/30 rounded-2xl p-1 w-full aspect-video flex items-center justify-center">
+                <div class="bg-primary/50 rounded-xl w-full h-full flex items-center justify-center">
+                  <div class="text-center p-6">
+                    <div class="inline-block p-4 bg-accent/20 rounded-full mb-4">
+                      <i class="fas fa-vr-cardboard text-accent text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Interactive Court Experience</h3>
+                    <p class="text-gray-300">Step onto the court with virtual reality storytelling</p>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent rounded-full opacity-20 blur-xl"></div>
+              <div class="absolute -top-4 -left-4 w-24 h-24 bg-white rounded-full opacity-10 blur-xl"></div>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Immersive Modern Experiences</h2>
+            <p class="text-gray-300 text-lg mb-6">
+              Experience basketball through innovative digital storytelling that transforms how you connect with the game. 
+              From interactive court tours to animated highlights, we bring the court to life in ways never seen before.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="flex-shrink-0 mt-1 mr-3 text-accent">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <span class="text-gray-300">360° Court Navigation</span>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 mt-1 mr-3 text-accent">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <span class="text-gray-300">Real-time Game Analysis</span>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 mt-1 mr-3 text-accent">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <span class="text-gray-300">VR Legend Encounters</span>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 mt-1 mr-3 text-accent">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <span class="text-gray-300">Historical Timeline Explorer</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Call to Action */}
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="bg-gradient-to-r from-primary to-accent rounded-3xl p-8 md:p-16 text-center">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Join the Basketball Legacy</h2>
+          <p class="text-accent/90 text-xl max-w-2xl mx-auto mb-8">
+            Become part of a community that celebrates basketball's rich narrative heritage while embracing modern innovation.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-colors">
+              Explore Stories
+            </button>
+            <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors">
+              Join Community
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+  
+  .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  }
+  
+  .hover\:bg-white\/20:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+  }
+  
+  .group:hover .group-hover\:bg-accent\/30 {
+    background-color: rgba(94, 234, 212, 0.3);
+  }
+  
+  .group:hover .group-hover\:bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .group:hover .group-hover\:border-accent\/50 {
+    border-color: rgba(94, 234, 212, 0.5);
+  }
+</style>
